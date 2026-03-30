@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
@@ -18,15 +19,31 @@ class RecipeApp extends StatelessWidget {
       title: 'Leftover Recipes',
       theme: ThemeData(
         useMaterial3: true,
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: const Color(0xFFFAFCF8),
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFFBEE8B8),
-          primary: const Color(0xFFBEE8B8),
-          secondary: const Color(0xFFDCF5D8),
+          seedColor: const Color(0xFFA9DFA2),
+          primary: const Color(0xFFA9DFA2),
+          secondary: const Color(0xFFEAF7E6),
+          surface: Colors.white,
+        ),
+        cardTheme: CardThemeData(
+          color: Colors.white,
+          elevation: 0,
+          margin: EdgeInsets.zero,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+        ),
+        navigationBarTheme: NavigationBarThemeData(
+          labelTextStyle: WidgetStateProperty.all(
+            const TextStyle(fontWeight: FontWeight.w600),
+          ),
         ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
-          fillColor: const Color(0xFFF4FAF2),
+          fillColor: const Color(0xFFF3F8F1),
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 14,
+            vertical: 12,
+          ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(14),
             borderSide: BorderSide.none,
